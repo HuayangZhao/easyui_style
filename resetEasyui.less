@@ -1,0 +1,489 @@
+@btnColor:#66B2FF ; //按钮颜色
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 12px;
+    /*font: inherit;*/
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-weight:normal;
+    //text-align: center;
+}
+img {
+    vertical-align: top
+}
+strong {
+    font-weight: normal
+}
+/*h1, h2, h3, h4, h5, h6 {*/
+/*font-size: 12px;*/
+/*}*/
+input {
+    font-size: 12px;
+    vertical-align: middle;
+    height: 25px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none!important;
+    padding: 0 3px 0 3px;
+    box-sizing: border-box;
+    font: 400 13.3333px Arial;
+}
+th,td {
+    font-weight: normal;
+}
+select {
+    width: 150px;
+    height: 25px;
+    color: #404040;
+    border-radius: 4px;
+    outline: none!important;
+    border: 1px solid #ccc;
+}
+select option {
+    font-size: 13.3333px;
+}
+textarea {
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font: 400 13.3333px Arial;
+}
+em {
+    font-style: normal
+}
+input[type=button], input[type=submit] {
+    cursor:pointer;
+}
+a:link {color:#050f94;}/* 未被访问的链接 */
+a:visited {color:#050f94;}/* 已被访问的链接 */
+a:hover {color:#050f94;}/* 鼠标指针移动到链接上 */
+a:active {color:#050f94;}
+a {text-decoration: none;}
+a:-webkit-any-link {text-decoration: none;}
+
+html,body {
+    width: 100%!important;
+    height: 100%!important;
+}
+//----------------------------------------查询模块
+.query-cond {
+    margin: 0;
+}
+//-----------------------------------------功能按钮
+    #tb,#tb2 {
+    .l-btn-text {
+        display: inline-block;
+        line-height: 19px;
+        padding: 2px 8px;
+        vertical-align: baseline;
+        WHITE-SPACE: nowrap;
+    }
+    .l-btn {
+        margin-right: 10px;
+    }
+    .l-btn-plain {
+        background: @btnColor;
+    }
+    .l-btn-left {
+        background: @btnColor;
+        border-radius: 3px;
+        display: inline-block;
+    }
+}
+//-----------------------------------------表格边框
+//.tableWrapper {
+    .datagrid-wrap{
+        border: none;
+        .datagrid-row-editing .textbox,
+        .datagrid-row-editing .textbox-text {
+            -moz-border-radius: 0 0 0 0;
+            -webkit-border-radius: 0 0 0 0;
+            border-radius: 4px;
+            height:20px!important;
+        }
+    }
+    .datagrid-view{
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+    }
+    .datagrid-view::after{
+        content: '';
+        position: absolute;
+        right: 1px;
+        height: 100%;
+        width: 1px;
+        background-color: #ccc;
+    }
+    .datagridBefore::before{content: '';position: absolute;bottom: 0;height: 1px;width: 100%;background-color: #ccc;
+    }
+//}
+//-------------------------------------------页面容器
+.page_body {
+    width: 100%;
+    border: none;
+    padding-bottom: 10px;
+}
+.cont-area {
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 5px;
+}
+//================================================面包屑导航
+.crumbs {
+    margin: 0;
+    border: 0;
+    background-color: #fff;
+}
+//---------------------------------------------弹框
+.window {
+    box-shadow: 1px 1px 20px 9px #ccc;
+    .panel-body {
+        background: #fff;
+        font-size: 14px;
+        color: #606266;
+    }
+    .l-btn {
+        height: 28px;
+        line-height: 28px;
+        color: #fff;
+        .l-btn-text{
+            margin: 2px 10px;
+        }
+    }
+    th {
+        text-align: right;;
+    }
+    td {
+        text-align: center;
+    }
+    .panel-header-noborder {
+        border: none;
+    }
+    .messager-body {
+        pre{
+            line-height: 16px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    }
+    //消息框
+    .messager-button {
+        :last-child.l-btn {
+            box-sizing: border-box;
+            background-color:#fff;
+            border: 1px solid #ccc;
+            .l-btn-text{
+                color: #999;
+            }
+        }
+        :last-child.l-btn:hover{
+            background-color: #D7E8F9;
+            border-color: #A4CAF1;
+            .l-btn-text{
+                color:#3393F5;
+            }
+        }
+        :first-child.l-btn {
+            box-sizing: border-box;
+            background-color:#66B2FF;
+            border: none;
+            .l-btn-text{
+                color: #fff;
+            }
+        }
+        :first-child.l-btn:hover{
+            box-sizing: border-box;
+            background-color:#66B2FF;
+            border: none;
+            .l-btn-text{
+                color: #fff;
+            }
+        }
+    }
+    //文件上传
+    #coupon_couponList_importForm ,
+    #importdialogForm,
+    #importdialogForm_01,
+    #importdialogForm_02{
+        margin-top: 20px;
+    }
+}
+.window-shadow {
+    display: none!important;
+    width: 0!important;
+    height: 0!important;
+    z-index: 0!important;
+}
+//----------------------------------------------滚动条
+//下拉框滚动条
+.combo-panel::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+.combo-panel::-webkit-scrollbar {
+    width: 8px;
+    height: 10px
+}
+.combo-panel::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #DFDFDF;
+}
+//表格滚动条
+.datagrid-body::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+.datagrid-body::-webkit-scrollbar {
+    width: 8px;
+    height: 10px
+}
+.datagrid-body::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #DFDFDF;
+}
+//窗口滚动条
+html::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+html::-webkit-scrollbar {
+    width: 8px;
+    height: 10px
+}
+html::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #DFDFDF;
+}
+//菜单导航滚动条
+.layout-panel-west>.layout-body::-webkit-scrollbar {
+    width: 0px;
+    height: 0px
+}
+//弹框滚动条
+.window-body::-webkit-scrollbar {
+    width: 0px;
+    height: 0px
+}
+.tabs-panels > panel > panel-body::-webkit-scrollbar {
+    width: 8px;
+    height: 0px
+}
+//-----------------------------表单页
+.easyui_input_text, textarea.easyui_textarea {
+    border: 1px solid #ccc!important;
+}
+.td_label {
+    font-weight: 400!important;
+}
+.edit_form {
+    .queryCondition {
+        width: auto;
+    }
+    .td_label{
+        white-space: nowrap;
+    }
+    .l-btn-text {
+        display: inline-block;
+        padding: 2px 8px;
+        vertical-align: baseline;
+        WHITE-SPACE: nowrap;
+    }
+    //.l-btn {
+    //    margin-right: 10px;
+    //}
+     .td_value {
+        padding-right: 10px;
+    }
+    td{
+        //:last-child.l-btn {
+        //    box-sizing: border-box;
+        //    background-color:#fff;
+        //    border: 1px solid #ccc;
+        //    .l-btn-text{
+        //        color: #999;
+        //    }
+        //}
+        //:last-child.l-btn:hover{
+        //    background-color: #D7E8F9;
+        //    border-color: #A4CAF1;
+        //    .l-btn-text{
+        //        color:#3393F5;
+        //    }
+        //}
+        .l-btn {
+            box-sizing: border-box;
+            background-color:#66B2FF;
+            border: none;
+            .l-btn-text{
+                color: #fff;
+            }
+        }
+       .l-btn:hover{
+            box-sizing: border-box;
+            background-color:#66B2FF;
+            border: none;
+            .l-btn-text{
+                color: #fff;
+            }
+        }
+    }
+}
+.textbox-text-readonly {
+    width: 100%!important;
+}
+.textbox  .l-btn-text {
+    padding: 2px 8px;
+}
+.textbox {
+    .l-btn {
+        margin: 0;
+    }
+}
+//--------------------------------单选按钮和复选框
+input[type="checkbox"],
+input[type="radio"] {
+    position: relative;
+}
+input[type="radio"] {
+    top: -2px;
+    margin: 0 10px;
+}
+input[type="checkbox"]::before {
+    content: "\a0"; /*不换行空格*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 1;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+input[type="checkbox"]:checked::before {
+    content: "\2713";
+    color: #fff;
+    font-weight: 700;
+    border-color: @btnColor;
+    background-color: @btnColor;
+}
+//单选框
+input[type="radio"]::before {
+    content: "\a0"; /*不换行空格*/
+    position: relative;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 1;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+input[type="radio"]:checked::before {
+    content: "\2713";
+    color: #fff;
+    font-weight: 700;
+    border-color: @btnColor;
+    background-color: @btnColor;
+}
+//--------------------------------------------------文件上传
+input[type='file'] {
+    border: none;
+}
+//-----------------------------------------日期选择框
+//底部按钮
+.datebox-button {
+    td {
+        text-align: center;
+    }
+}
+//-------------------嵌套TAB
+.tabs-panels {
+    background-color: #fff;
+    padding: 10px 0 0 0;
+}
+//----------------------------===========分页
+.datagrid-pager.pagination {
+    table {
+        tr td{
+            .l-btn {
+                background-color: transparent;
+                border: none;
+                .l-btn-text {
+                    padding: 0;
+                    color: #000;
+                }
+            }
+            .l-btn:hover {
+                background: transparent;
+                .l-btn-text {
+                    color: #000;
+                }
+            }
+            .l-btn-selected {
+                background-color: @btnColor;
+                .l-btn-text {
+                    color: #fff;
+                }
+            }
+            .l-btn-selected:hover {
+                background-color: @btnColor;
+                .l-btn-text {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+//-----------OMS订单查询
+#divBtn {
+    display: flex;
+    height: 34px;
+    align-items:center;
+}
+#toolbar {
+    .btn1{
+        span {
+            background-color: @btnColor;
+            border-radius: 4px;
+            padding: 4px 0px;
+        }
+    }
+}

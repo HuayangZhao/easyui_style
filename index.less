@@ -1,0 +1,218 @@
+@bgc:#4E546C; //菜单栏主题背景色
+@one_levelBgc:#2F3653; //一级菜单背景色
+@fillBgc:#EEF4F9; //边距填充颜色
+@fontColor:#A8B7C5; //字体颜色
+@selectFontColor:#66B2FF ; //选中时字体颜色
+@one_levelFontColor:#fff; //一级菜单字体颜色
+@tow_levelFontColor:#AFAFBB; //二级菜单字体颜色
+//==================================================侧栏菜单
+.layout-panel-west {
+    width: 180px;
+    background-color:@bgc;
+    .panel {
+        background-color:@bgc;
+    }
+    //二级菜单和主体背景色
+    #leftMenuDiv {
+        margin: 0;
+    }
+    .panel-body{
+        background-color:@bgc;
+        //margin: 15px 0;
+        .menu_option {
+            height: 30px;
+            padding: 5px 0 5px 20px;
+            color: @tow_levelFontColor;
+            font-size: 14px;
+            line-height: 30px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        //选择项背景 及左边小竖线
+        .menu_option.selected {
+            background: none;
+            font-weight: 400;
+            color: @selectFontColor;
+            //border-left: 3px solid @selectFontColor;
+        }
+    }
+    //一级菜单
+    .accordion .accordion-header-selected {
+        .panel-title {
+            color: @selectFontColor;
+        }
+    }
+    .panel-header {
+        background-color:@one_levelBgc;
+        .panel-title {
+            font-size: 14px;
+            //font-weight: bold;
+            color: @one_levelFontColor;
+            height: 40px;
+            line-height: 40px;
+        }
+    }
+    //去边框
+    .accordion {
+        overflow: hidden;
+        border: none;
+        .accordion-header {
+            border: none;
+        }
+    }
+    //箭头样式
+    .accordion-collapse {
+        background: none;
+    }
+    .accordion-header::after,
+    .tree-node-nonleaf::after {
+        display: inline-block;
+        color: @one_levelFontColor;
+        vertical-align: top;
+        border-style: solid;
+        transform: rotate(45deg);
+        width: 8px;
+        height: 8px;
+        content: '';
+        position: absolute;
+        right: 12px;
+        top: 43%;
+        border-width: 0 1px 1px 0;
+        background: none;
+    }
+    .accordion-header-selected::after {
+        //transform: rotate(-135deg);
+        top: 47%;
+        border-width: 1px 0  0 1px;
+        color: @selectFontColor;
+    }
+}
+.panel-header, .panel-body {
+    border: none;
+}
+.layout-expand {
+    background-color: @bgc;
+}
+//去边框
+.panel-body-noheader {
+    border-color: transparent;
+}
+.panel-header, .panel-body {
+    border-color: transparent;
+    background: #fff;
+}
+.panel-body.panel-body-noheader.layout-body.panel-noscroll {
+    padding-top: 3px;
+    width: 100% !important;
+    border: none;
+    background: @fillBgc;
+}
+.panel-icon {
+    width: 18px;
+    height: 18px;
+    left: 10px;
+}
+//====================================================底部
+.log-copyright {
+    color: #9B9B9B;
+    background: @fillBgc;
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+    border: none;
+}
+//======================================================首页
+//.homeTab {
+//    //padding:10px;
+//    box-sizing: border-box;
+//    img {
+//        width: 30%;
+//        position: absolute;
+//        left: 50%;
+//        top: 55%;
+//        transform: translate(-50%,-55%);
+//    }
+//}
+//=====================================================标签栏
+//去背景
+.tabs-header, .tabs-tool {
+    background: #EEF4F9;
+    padding: 0;
+    padding-left: 10px;
+}
+//边框色
+.tabs-panels,
+.tabs-header,
+.tabs-scroller-left,
+.tabs-scroller-right,
+.tabs-tool,
+.tabs,
+.tabs li a.tabs-inner,
+.tabs li.tabs-selected a.tabs-inner,
+.tabs-header-bottom .tabs li.tabs-selected a.tabs-inner,
+.tabs-header-left .tabs li.tabs-selected a.tabs-inner,
+.tabs-header-right .tabs li.tabs-selected a.tabs-inner {
+    border: none;
+}
+.tabs {
+    padding:0;
+    li {
+        margin-bottom: 4px;
+        background: #C3C8D3;
+        border-radius: 5px;
+        a.tabs-inner {
+            color: #fff;
+            background: none;
+        }
+        a.tabs-inner:hover {
+            background: none;
+            color: #999;
+        }
+        //字体图标
+        .tabs-with-icon {
+            padding-left: 0;
+        }
+    }
+    //选中背景
+    li.tabs-selected {
+        margin-bottom: 0;
+        padding: 2px 0;
+        background-color: #fff;
+        border-radius: 5px 5px 0 0;
+        //a.tabs-close {
+        //  top: 18/100rem;
+        //}
+        a.tabs-inner {
+            background: none;
+        }
+        //选中字体
+        .tabs-title {
+            color: #2F3653;
+        }
+    }
+}
+.tabs-panels {
+    background-color: #eef4f9;
+    padding: 0 10px;
+}
+//===================================================修改密码框
+//.window {
+//    table tr {
+//        :nth-child(1){
+//            flex: 1;
+//            //text-align: right;
+//        }
+//        :nth-child(2){
+//            flex: 3;
+//        }
+//        input {
+//            width: 90%;
+//            padding-left: 5px;
+//            height: 32px;
+//            line-height: 32px;
+//            border-radius: 4px;
+//            //text-align: left;
+//        }
+//    }
+//}
