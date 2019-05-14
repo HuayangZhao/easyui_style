@@ -2,38 +2,22 @@
 ## 一.导入样式文件 ----附件名 :  zhy_style.zip      
 
 ##### │ index.css ---------------- 框架样式
-
 ##### │ index.css.map
-
 ##### │ index.less
-
 ##### │ initEasyui.css------------ 可以直接删除easyui.css用此样式文件代替
-
 ##### │ initEasyui.css.map
-
 ##### │ initEasyui.less
-
 ##### │ layout.css--------------- 替换l公共样式内容
-
 ##### │ layout.css.map
-
 ##### │ layout.less
-
 ##### │ resetEasyui.css---------- 样式初始化,及一些特殊情况样式
-
 ##### │ resetEasyui.css.map
-
 ##### │ resetEasyui.less
-
 ##### │
-
 ##### ├─images------------------ 样式中需要的图片文件
-
 ##### │
-
 ##### └─ style_js
-
-#####                moveHtml.js------------ 一些JS函数
+##########   moveHtml.js------------ 一些JS函数
 
 ### 容器命名遵循下表:
 
